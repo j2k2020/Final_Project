@@ -1,0 +1,100 @@
+@charset "UTF-8";
+/* main_header.css */
+
+#wrap {
+	overflow: hidden;
+	min-width: 1190px;
+}
+
+body, button, input, select, table, textarea {
+    font-size: 12px;
+    line-height: 16px;
+    color: #202020;
+    font-family: -apple-system,BlinkMacSystemFont,"Malgun Gothic","맑은 고딕",helvetica,"Apple SD Gothic Neo",sans-serif;
+}
+
+div{
+	display: block;
+}
+
+#header {
+    position: relative;
+    background-color: #c0c0c0; /* header_div 색상은 회색 */
+    z-index: auto;
+    height: 120px;
+    border-bottom: 1px solid #e4e8eb;
+}
+
+ #header .header_bg {
+    position: relative;
+    width: 1130px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+    background-color: #8080ff;
+}
+
+
+/* 검색 또는 로고삽입 가능 */
+#header .logo_area {
+    position: relative;
+    height: 100%;
+    background-color: #ff80ff;
+}
+
+#header .logo_img {
+    position: absolute;
+    top: 70%;
+    left: 20%;
+    margin-top: -32px;
+   border: 1px solid #800080;
+}
+
+#logo {
+	font: italic;
+	font-size: xx-large; /* '검색'이라는 글자 크기 */
+}
+
+
+
+/* 검색창 */
+#header .search_area {
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    background-color: #004080;/*  네이비 */
+}
+
+#header .search_area .search_form{
+	position: relative;
+	width: 300%;
+    background-color: #00ff00; /* 연두 */
+    text-align: center;
+    margin: 0 auto;
+   /*  left: 100%; */
+    
+}
+
+input{
+	display: inline;
+}
+
+#s_input {
+    width: 80%;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+    padding: 10px 12px;
+    background-color: #ffffff;
+}
+
+#submit {
+   /*  width: 3%; */
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+    padding: 10px 12px;
+}
+
+
+

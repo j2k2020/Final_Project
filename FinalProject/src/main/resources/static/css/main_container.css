@@ -1,0 +1,144 @@
+@charset "UTF-8";
+/* main_container.css */
+#container {
+	position: relative;
+	/*  width: 100%; */
+	width: 1130px;
+	padding: 10px 10px;
+	margin: 0 auto;
+	letter-spacing: -.2px;
+	background-color: #ffff80; /* 노랑색 */
+}
+
+.main_left {
+	float: left;
+	width: 750px;
+	background-color: #ff8080; /* 찐살구색 */
+}
+
+#container .main_left .main_left_nav {
+	overflow: hidden;
+	position: relative;
+	padding: 11px 270px 11px 0;
+	background-color: #ffdddd; /* 연살구색 */
+}
+
+#container .main_left .main_left_nav .group_nav {
+	float: none; /* 정렬하지 않음 */
+	width: 700px;
+	margin-left: 25px;
+	font-size: 20px;
+	line-height: 30px;
+	font-weight: 100%;
+	color: #000;
+	letter-spacing: normal;
+	background-color: #80ffff; /* 하늘색 */
+}
+
+/* 한 줄로 정렬 */
+ul, li {
+	display: inline;
+}
+
+ul {
+	border: 1px solid black;
+	margin-left: 85px;
+}
+
+#nav_item1 {
+	font-weight: 100%;
+	margin: 0;
+	padding: 0;
+	/* border: 1px solid red; */
+	margin-left: -30px;
+}
+
+#nav_item2 {
+	font-weight: 100%;
+	margin: 0;
+	padding: 0;
+	/* border: 1px solid red; */
+	margin-left: -30px;
+}
+
+#nav_item3 {
+	font-weight: 100%;
+	margin: 0;
+	padding: 0;
+	/* border: 1px solid red; */
+	margin-left: -30px;
+}
+
+#nav_item4 {
+	font-weight: 100%;
+	margin: 0;
+	padding: 0;
+	/* border: 1px solid red; */
+	margin-left: -30px;
+	margin-right: 10px;
+}
+#container .main_body{
+	 display: flex;
+}
+#container .mLeft_left {
+	position: relative;
+	width: 310px;
+	margin-top: 12px;
+	height: 500px;
+	border: 1px solid #dae1e6;
+	border-width: 1px 0;
+	background-color: #80ffff; /* 하늘색 */
+}
+#container .mLeft_right {
+	position: relative;
+	width: 420px;
+	margin-top: 12px;
+	margin-left: 10px;
+	height: 500px;
+	border: 1px solid #dae1e6;
+	border-width: 1px 0;
+	background-color: #80ffff; /* 하늘색 */
+}
+
+.main_right {
+	float: left;
+	width: 380px;
+	background-color: #ff0080; /* 찐핑크색 */
+}
+
+/* 멀티켐퍼스 참고 */
+.main_right .login{
+	position: relative;
+	width: 350px;
+	margin-left: 15px;
+	background-color: #ffe3f1; /* 연핑크색 */
+}
+
+.main_right .login #loginID,#loginPW{
+	padding: 2px 0 0;
+    width: 100%;
+    height: 38px;
+    outline: 0;
+    border: solid #ccc;
+    border-width: 0 0 1px;
+    background: #fff;
+    letter-spacing: -0.5px;
+    font-size: 15px;
+}
+
+
+/* 로그인, 회원가입 버튼 */
+.btn{
+	padding: 2px 0 0;
+	margin-left: 5%;
+	margin-bottom: 10px;
+    width: 40%;
+    height: 28px;
+    outline: 0;
+    border: solid #000000;
+    border-radius: 10% / 50%;
+    border-width: 1px;
+    background: #fff;
+    /* letter-spacing: -0.5px; */
+    font-size: 15px; 
+}
