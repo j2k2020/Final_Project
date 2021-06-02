@@ -1,19 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>       
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Index 페이지</title>
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/main_header.css'/>">
-<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/main_container.css'/>">
-	<link rel="stylesheet" type="text/css"
-	href="<c:url value='/css/main_footer.css'/>">
+<title>login 후 메인페이지</title>
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/main_header.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/main_container.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/main_footer.css'/>">
 </head>
-
 <body>
 	<div id="wrap">
 		<div id="header">
@@ -57,16 +53,13 @@
 			<!-- 로그인, 챗봇 -->
 			<div class="main_right"><!-- 메인_오른쪽 -->
 			<!-- 로그인창 시작 -->
-				<form action="/Login" class="login">
-					<h1>로그인</h1>
+				<form action="#" class="login">
+					<h1>환영합니다^^</h1>
 					<input type="text" id="loginID" name="loginID"
-						maxlength="60" placeholder="아이디를 입력하세요">
+						maxlength="60" placeholder="   로그인 후 -> 이름 & 아이디 출력">
 					<p>
-						<input type="password" id="loginPW" name="loginPW" maxlength="60"
-							placeholder="비밀번호를 입력하세요">
-					<p>
-						<div class="btn"><a href="btn_login" id="btn_login" >로그인</a><br></div>
-						<div class="btn"><a href="btn_join" id="btn_join" >회원가입</a><br></div>
+						<div class="btn"><a href="#" id="#" >로그아웃</a><br></div>
+						<div class="btn"><a href="#" id="#" >마이페이지</a><br></div>
 				</form><!-- 로그인창 끝 -->
 				
 				<!-- 챗봇창 시작-->

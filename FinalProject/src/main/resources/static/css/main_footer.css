@@ -1,0 +1,16 @@
+@charset "UTF-8";
+/* main_footer.css */
+
+#footer{
+	position: relative;
+    background-color: #464646; /*회색 */
+    height: 100px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#footer a{
+	color: white;
+    font-family: monospace;
+    font-size: 3em;
+}

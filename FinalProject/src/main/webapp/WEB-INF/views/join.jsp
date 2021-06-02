@@ -74,10 +74,9 @@
 <input type="reset" value="취소">
 
 </form><br><br>
-
-<a href="/">메인으로</a>
-
+<a href="/">메인으로</a><br>
+<a href="joinMemberList">회원 정보 페이지</a>
+<br>
 </div>
 </body>
-
 </html>
