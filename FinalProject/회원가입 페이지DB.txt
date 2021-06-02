@@ -7,7 +7,7 @@
             joMonth VARCHAR(5),
             joDate VARCHAR(5)
             );
-INSERT INTO joinMember VALUES('정재은', 'j2k2020', '12345!!','j2k2020@naver.com','1989','4','22'); 
+INSERT INTO joinMember VALUES('정재은', 'j2k2020', '12345!!','j2k2020@naver.com','8888','8','88'); 
 SELECT * FROM joinMember;   
 
 drop table joinMember ;
