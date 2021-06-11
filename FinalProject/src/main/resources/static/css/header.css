@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* main_header.css */
+
+#wrap {
+	overflow: hidden;
+	min-width: 1190px;
+}
+body{
+	font-family: Garamond, serif;
+}
+
+#header {
+    position: relative;
+   /*  background-color: #050505; header_div */
+    z-index: auto;
+    height: 110px;
+    border-bottom: 5px solid #d7dde1;
+}
+
+#logo {
+	font-size: 70px; /* '검색'이라는 글자 크기 */
+	font-weight: bolder;
+	/* color: white; */
+}
+
+
+/* 로그인 */
+.logo_area .btn1{
+	position: relative;
+	float: right;
+	margin-right: 3%;
+	margin-top: -10px;
+	/* border: 1px solid #c0c0c0; */
+	border-radius: 20% / 50%;
+	padding: 5px;
+}
+
+.logo_area .btn1 a{
+	text-decoration: none;
+	color: #000000;
+	font-size: 20px;
+	font-weight: bolder;
+	font-family: Garamond, serif;
+}
+
+
+
+
+/* 로그인 후 메인페이지 */
+.logo_area .btn2{
+	position: relative;
+	float: right;
+	margin-right: 3%;
+	margin-top: -10px;
+	border-radius: 20% / 50%;
+	padding: 5px;
+}
+
+/* 로그인 -> 아이디 출력 */
+.logo_area .btn2 #a1{
+	text-decoration: none;
+	color: #000000;
+	font-size: 18px;
+	font-family: Garamond, serif;
+}
+.logo_area .btn2 #a2{
+	text-decoration: none;
+	color: #000000;
+	font-size: 20px;
+	font-weight: bolder;
+	font-family: Garamond, serif;
+}
+
+/* 로그아웃->누르면 홈으로*/
+.logo_area .btn2 #btn_loginOut{
+	text-decoration: none;
+	color: #000000;
+	font-size: 20px;
+	font-weight: bolder;
+	font-family: Garamond, serif;
+}
+.logo_area .btn2 #btn_loginOut:hover{
+	/* visibility: hidden; */
+	color: #00ffff;
+}
+
+

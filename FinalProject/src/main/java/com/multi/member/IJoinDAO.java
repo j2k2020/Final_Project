@@ -6,6 +6,7 @@ public interface IJoinDAO {
 	public ArrayList<JoinVO> joinList();
 	public void insertJoin(JoinVO join);
 	public JoinVO idCheck(String id);
+	public JoinVO loginCheck(String joID, String joPassword);
 
 
 }

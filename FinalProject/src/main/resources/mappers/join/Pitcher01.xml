@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.member.Pitcher01.IPitcher01DAO">
+	<resultMap type="com.multi.member.Pitcher01.Pitcher01VO" id="pitcher01Result">
+		<result property="pNum" column="pNum" />
+		<result property="pName" column="pName" />
+		<result property="pTeam" column="pTeam" />
+		<result property="pERA" column="pERA" />
+		<result property="pG" column="pG" />
+		<result property="pW" column="pW" />
+		<result property="pL" column="pL" />
+		<result property="pSV" column="pSV" />
+		<result property="pHLD" column="pHLD" />
+		<result property="pWPCT" column="pWPCT" />
+		<result property="pIP" column="pIP" />
+		<result property="pH" column="pH" />
+		<result property="pHR" column="pHR" />
+		<result property="pBB" column="pBB" />
+		<result property="pHBP" column="pHBP" />
+		<result property="pSO" column="pSO" />
+		<result property="pR" column="pR" />
+		<result property="pER" column="pER" />
+		<result property="pWHIP" column="pWHIP" />
+		<result property="pCG" column="pCG" />
+		<result property="pSHO" column="pSHO" />
+		<result property="pQS" column="pQS" />
+		<result property="pBSV" column="pBSV" />
+		<result property="pTBF" column="pTBF" />
+		<result property="pNP" column="pNP" />
+		<result property="pAVG" column="pAVG" />
+		<result property="p2B" column="p2B" />
+		<result property="p3B" column="p3B" />
+		<result property="pSAC" column="pSAC" />
+		<result property="pSF" column="pSF" />
+		<result property="pIBB" column="pIBB" />
+		<result property="pWP" column="pWP" />
+		<result property="pBK" column="pBK" />
+	</resultMap>
+
+	<!-- 가입한 회원 정보 -->
+	<select id="pitcher01List" resultMap="pitcher01Result">
+		SELECT * FROM pitcher
+	</select>
+</mapper>

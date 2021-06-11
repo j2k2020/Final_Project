@@ -31,4 +31,11 @@ SELECT * FROM joinMember
 <select id="idCheck" resultMap="JoinResult" parameterType="String">
 SELECT joID FROM joinMember WHERE joID=#{joID}
 </select>
+
+<!-- 로그인 확인 -->
+<select id="loginCheck" resultMap="JoinResult" parameterType="hashmap">
+<![CDATA[
+SELECT * FROM joinMember WHERE joID=#{joID} AND joPassword=#{joPassword}
+]]> <!-- 오류방지하기 위해 CDATA사용 -->
+</select>
 </mapper>

@@ -1,6 +1,7 @@
 package com.multi.member;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -24,10 +25,22 @@ IJoinDAO dao;
 		dao.insertJoin(join);
 
 	}
-
-	public JoinVO idCheck(String id) {
+	
+	@Override
+	public JoinVO idCheck(String id) { //회원가입: id 중복체크
 		return dao.idCheck(id);
 	}
+
+	
+	@Override
+	public JoinVO LoginCheck(String joID, String joPassword) { //로그인: id,pw 확인 후 로그인
+		HashMap<String,String> map=new HashMap<String,String>();
+		map.put("joID", joID);
+		map.put("joPassword", joPassword);
+		return dao.loginCheck(joID, joPassword);
+	}
+	
+	
 
 	
 }

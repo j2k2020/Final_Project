@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.multi.member.Defense01.IDefense01DAO">
+	<resultMap type="com.multi.member.Defense01.Defense01VO" id="defense01Result">
+		<result property="dNum" column="dNum" />
+		<result property="dName" column="dName" />
+		<result property="dTeam" column="dTeam" />
+		<result property="dPOS" column="dPOS" />
+		<result property="dG" column="dG" />
+		<result property="dGS" column="dGS" />
+		<result property="dIP" column="dIP" />
+		<result property="dE" column="dE" />
+		<result property="dPKO" column="dPKO" />
+		<result property="dPO" column="dPO" />
+		<result property="dA" column="dA" />
+		<result property="dDP" column="dDP" />
+		<result property="dFPCT" column="dFPCT" />
+		<result property="dPB" column="dPB" />
+		<result property="dSB" column="dSB" />
+		<result property="dCS" column="dCS" />
+		<result property="dCSPercent" column="dCSPercent" />
+	</resultMap>
+	
+	<select id="defense01List" resultMap="defense01Result">
+	SELECT * from defense
+	</select>
+</mapper>

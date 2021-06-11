@@ -1,30 +1,35 @@
 @charset "UTF-8";
 /* main_container.css */
-#container {
+
+
+.container {
 	position: relative;
-	/*  width: 100%; */
-	width: 1130px;
-	padding: 10px 10px;
+	/* width: 1130px; */
+	/* padding: 10px 10px;
 	margin: 0 auto;
-	letter-spacing: -.2px;
-	/* background-color: #ffff80; 노랑색 */
+	letter-spacing: -.2px; */
 }
 
+.cantainer img{
+	width: 100%;
+	height: 100%; 
+	object-fit: contain;
+}
+
+/* 
 .main_left {
 	float: left;
 	width: 750px;
-	/* background-color: #ff8080; 찐살구색 */
 }
 
 #container .main_left .main_left_nav {
 	overflow: hidden;
 	position: relative;
 	padding: 20px 270px 20px 0;
-	/* background-color: #ffdddd; 연살구색 */
 }
 
 #container .main_left .main_left_nav .group_nav {
-	float: none; /* 정렬하지 않음 */
+	float: none; 정렬하지 않음
 	width: 700px;
 	margin-left: 25px;
 	font-size: 20px;
@@ -32,10 +37,9 @@
 	font-weight: 100%;
 	color: #000;
 	letter-spacing: normal;
-	/* background-color: #80ffff; 하늘색 */
 }
 
-/* 한 줄로 정렬 */
+한 줄로 정렬
 .nav_item {
 	display: inline;
 	border: 2px solid dae1e6;
@@ -46,11 +50,11 @@
 #nav_item {
 	width: 100%;
     height: 100%;
-    /* border: 1px solid black; */
+    border: 1px solid black;
 }
 
 #nav_item a{
-	/* width: 50px; */
+	width: 50px;
     height: 100%;
     border: 1px solid black;
     margin-left: 3%;
@@ -66,14 +70,14 @@
 #container .main_body{
 	 display: flex;
 }
-#container .mLeft_left { /* 메인페이지 왼쪽 */
+#container .mLeft_left { 메인페이지 왼쪽
 	position: relative;
 	width: 310px;
 	margin-top: 12px;
 	height: 500px;
 	border: 2px dotted #dae1e6;
 	border-radius: 2em;
-	/* border-width: 1px 0; */
+	border-width: 1px 0;
 	background-color: #b6b8bc; 
 }
 #container .mLeft_right {
@@ -91,11 +95,11 @@
 	float: left;
 	width: 380px;
 	height: 566px;
-	/* background-color: #ff0080; 찐핑크색 */
+	background-color: #ff0080; 찐핑크색
 }
 
-/* 멀티켐퍼스 참고 */
-/* 로그인 창 */
+멀티켐퍼스 참고
+로그인 창
 .main_right .login{
 	position: relative;
 	width: 350px;
@@ -103,19 +107,21 @@
 	margin-top: -5px;
 	border: 2px dotted #d7dde1;
 	border-radius: 2em;
-	background-color: #f0f0f0; /* 연핑크색 */
+	background-color: #f0f0f0; 연핑크색
 }
 
-.login h1{ /* 로그인 글-> 향후 이미지로 변경 가능 */
+.login h1{ 로그인 글-> 향후 이미지로 변경 가능
 	padding-top: 10px;
 	margin-left: 10%;
 	padding-bottom: 10px;
 	font-family: monospace;
 }
 
-.main_right .login #loginID,#loginPW{
-	padding: 2px 0 0;
-    width: 100%;
+
+
+.main_right .login #joID,#joPassword{
+	padding-left: 40px;
+    width: 300px;
     height: 38px;
     outline: 0;
     border: 1px solid #ccc;
@@ -127,11 +133,11 @@
 }
 
 
-/* 로그인, 회원가입 버튼 */
+로그인, 회원가입 버튼
 .btn{
-	display: inline-flex; /* 버튼들이 가로정렬 */
+	display: inline-flex; 버튼들이 가로정렬
 	margin-left: 5%;
-	margin-top: 15px; /* 입력창과 거리두기 */
+	margin-top: 15px; 입력창과 거리두기
 	margin-bottom: 10px;
     width: 40%;
     height: 35px;
@@ -142,24 +148,28 @@
 }
 
 
+로그인 버튼은 input태그
 .btn #btn_login{
 	text-decoration: none;
 	font-size: 20px;
 	font-family: monospace;
-	font-weight: bold; /* 글자 굵기 */
+	font-weight: bold; 글자 굵기
 	color: black;
-	margin-left: 40px;
-	padding-top: 10px;
+	margin-left: 30px;
+	padding-top: 5px;
 	text-align: center;
 	vertical-align: middle;
+	background: #fff;
+	border: none;
 	
 }
 
+회원가입 버튼은 a태그
 .btn #btn_join{
 	text-decoration: none;
 	font-size: 20px;
 	font-family: monospace;
-	font-weight: bold; /* 글자 굵기 */
+	font-weight: bold; 글자 굵기
 	color: black;
 	margin-left: 30px;
 	padding-top: 10px;
@@ -169,7 +179,7 @@
 
 
 
-/*  챗봇 창 */
+ 챗봇 창
 .main_right .Chatbot{
 	position: relative;
 	width: 350px;
@@ -178,9 +188,7 @@
 	margin-left: 15px;
 	border: 2px dotted #d7dde1;
 	border-radius: 2em;
-	background-color: #f0f0f0; /* 연핑크색 */
+	background-color: #f0f0f0; 연핑크색
 }
 
-
-
-
+ */

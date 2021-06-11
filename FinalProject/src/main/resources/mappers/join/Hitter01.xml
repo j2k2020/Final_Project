@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.member.hitter01.IHitter01DAO">
+	<resultMap type="com.multi.member.hitter01.hitter01VO" id="hitter01Result">
+		<result property="hNum" column="hNum" />
+		<result property="hName" column="hName" />
+		<result property="hTeam" column="hTeam" />
+		<result property="hAvg" column="hAvg" />
+		<result property="hG" column="hG" />
+		<result property="hPa" column="hPa" />
+		<result property="hAb" column="hAb" />
+		<result property="hR" column="hR" />
+		<result property="hH" column="hH" />
+		<result property="h2b" column="h2b" />
+		<result property="h3b" column="h3b" />
+		<result property="hHr" column="hHr" />
+		<result property="hTb" column="hTb" />
+		<result property="hRbi" column="hRbi" />
+		<result property="hSac" column="hSac" />
+		<result property="hSf" column="hSf" />
+		<result property="hBb" column="hBb" />
+		<result property="hIbb" column="hIbb" />
+		<result property="hHbp" column="hHbp" />
+		<result property="hSo" column="hSo" />
+		<result property="hGdp" column="hGdp" />
+		<result property="hSlg" column="hSlg" />
+		<result property="hObp" column="hObp" />
+		<result property="hOps" column="hOps" />
+		<result property="hMh" column="hMh" />
+		<result property="hRisp" column="hRisp" />
+		<result property="hPhba" column="hPhba" />
+	</resultMap>
+
+	<!-- 가입한 회원 정보 -->
+	<select id="hitter01List" resultMap="hitter01Result">
+		SELECT * FROM hitter
+	</select>
+</mapper>

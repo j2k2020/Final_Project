@@ -5,23 +5,23 @@
 	min-width: 1190px;
 }
 
-.header {
+/* .header {
     position: relative;
-    background-color: #e6e6e6; /* main_header와 색상 맞추기*/
+    background-color: #e6e6e6; main_header와 색상 맞추기
     z-index: auto;
     height: 160px;
 }
 
-/* 로고를 넣으면 좋겠음 */
+로고를 넣으면 좋겠음
 .header .Logo {
     position: relative;
-    background-color: #f0f8ff; /*파랑색 */
+    background-color: #f0f8ff; 파랑색
     height: 80px;
     border-bottom: 3px solid #e6e6e6;
-}
+} */
 
 /* 배너 영역 */
-.header .event{
+.event{
 	width: 1130px;
     height: 30px;
     margin: 10px auto;
@@ -29,7 +29,7 @@
 	/* background-color: #e6e6e6; */
 }	
 
-.header .event .event_items{
+.event .event_items{
     display: inline-flex; /* 배너 가로정렬 */
 	margin-left: 3%;
 	margin-top: 5px;
@@ -111,7 +111,6 @@
 .list_body{
 	position: relative;
     background-color: #ffffff; /*회색 */
-    height: 500px;
     /* border: 2px solid #8080c0; */
 	
 }
