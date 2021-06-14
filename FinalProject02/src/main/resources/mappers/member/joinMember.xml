@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.member.IJoinMemberDAO">
+<resultMap type="com.multi.member.JoinMemberVO" id="joinResult">
+<result column="joName" property="joName" />
+<result column="joID" property="joID" />
+<result column="joPassword" property="joPassword" />
+<result column="joEmail" property="joEmail" />
+<result column="joYear" property="joYear" />
+<result column="joMonth" property="joMonth" />
+<result column="joDate" property="joDate" />
+</resultMap>
+
+<!-- 로그인:아이디,비밀번호 -->
+<select id="loginCheck" resultMap="joinResult" parameterType="hashmap">
+<![CDATA[
+SELECT * FROM joinMember WHERE joID=#{joID} AND joPassword=#{joPassword}
+]]>
+</select>
+
+<!-- 신규회원가입 -->
+<insert id="insertMember" parameterType="com.multi.member.JoinMemberVO">
+INSERT INTO joinMember VALUES (#{joName}, #{joID}, #{joPassword}, #{joEmail}, #{joYear}, #{joMonth}, #{joDate})
+</insert>
+
+<!-- 회원가입:id중복체크 -->
+<select id="idCheck" resultMap="joinResult" parameterType="String">
+SELECT joID FROM joinMember WHERE joID=#{joID}
+</select>
+
+<!-- 마이페이지 -->
+<select id="readMyId" resultMap="joinResult" parameterType="String">
+SELECT * FROM joinMember WHERE joID=#{joID}
+</select>
+</mapper>  
