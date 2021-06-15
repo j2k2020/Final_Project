@@ -18,8 +18,8 @@
 			<div class="logo_img">
 				<a id="logo">United Baseball Club</a>
 			</div>
-	        <div class="btn1"><a href="btn_join" id="btn_join" >회원가입</a></div>
-	        <div class="btn1"><a href="btn_login" id="btn_join">로그인</a></div>
+	        <div class="btn1"><a href="<c:url value='btn_join'/>" id="btn_join" >회원가입</a></div>
+	        <div class="btn1"><a href="<c:url value='btn_login'/>" id="btn_join">로그인</a></div>
 		</div>
 		</div>
 		</div><!-- end header -->

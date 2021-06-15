@@ -1,0 +1,95 @@
+SELECT * FROM hitter;   
+create table hitter(
+    hNum int,
+    hName varchar(30),
+    hTeam varchar(10),
+    hAvg varchar(10),
+    hG varchar(10),
+    hPa varchar(10),
+    hAb varchar(10),
+    hR varchar(10),
+    hH varchar(10),
+    h2B varchar(10),
+    h3B varchar(10),
+    hHr varchar(10),
+    hTb varchar(10),
+    hRbi varchar(10),
+    hSac varchar(10),
+    hSf varchar(10),
+    hBb varchar(10),
+    hIbb varchar(10),
+    hHbp varchar(10),
+    hSo varchar(10),
+    hGdp varchar(10),
+    hSlg varchar(10),
+    hObp varchar(10),
+    hOps varchar(10),
+    hMh varchar(10),
+    hRisp varchar(10),
+    hPhba varchar(10)
+);
+
+
+
+
+
+
+create table pitcher(
+    pNum int,
+    pName varchar(30),
+    pTeam varchar(10),
+    pERA varchar(10),
+    pG varchar(10),
+    pW varchar(10),
+    pL varchar(10),
+    pSV varchar(10),
+    pHLD varchar(10),
+    pWPCT varchar(10),
+    pIP varchar(10),
+    pH varchar(10),
+    pHR varchar(10),
+    pBB varchar(10),
+    pHBP varchar(10),
+    pSO varchar(10),
+    pR varchar(10),
+    pER varchar(10),
+    pWHIP varchar(10),
+    pCG varchar(10),
+    pSHO varchar(10),
+    pQS varchar(10),
+    pBSV varchar(10),
+    pTBF varchar(10),
+    pNP varchar(10),
+    pAVG varchar(10),
+    p2B varchar(10),
+    p3B varchar(10),
+    pSAC varchar(10),
+    pSF varchar(10),
+    pIBB varchar(10),
+    pWP varchar(10),
+    pBK varchar(10)
+);
+
+
+drop table defense;
+select * from defense;
+
+create table defense(
+    dNum int,
+    dName varchar(30),
+    dTeam varchar(10),
+    dPOS varchar(10),
+    dG varchar(10),
+    dGS varchar(10),
+    dIP varchar(10),
+    dE varchar(10),
+    dPKO varchar(10),
+    dPO varchar(10),
+    dA varchar(10),
+    dDP varchar(10),
+    dFPCT varchar(10),
+    dPB varchar(10),
+    dSB varchar(10),
+    dCS varchar(10),
+    dCSPercent varchar(10)
+    );

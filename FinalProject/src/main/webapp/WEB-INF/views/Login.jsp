@@ -39,13 +39,18 @@
 <label>비밀번호</label>
 <input type="password" name="joPassword" id="joPassword" maxlength="20" placeholder="password" required>
 </div>
-
+<c:if test="${join.joID !='admin' }">
 <button type="submit" id="login">로그인</button>
+</c:if>
+<c:if test="${join.joID =='admin' }">
+<a href="<c:url value='/admin/main' />">관리자 화면</a>
+</c:if>
 </form><!-- 로그인창 끝 -->
 
 </div>
 <!-- 아이디,비밀번호 끝-->	
-	
-</div><!-- end wrap -->
+
+
+
 </body>
 </html>

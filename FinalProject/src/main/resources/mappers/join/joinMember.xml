@@ -21,21 +21,46 @@ insert into joinMember(joName, joID, joPassword, joEmail, joYear, joMonth, joDat
 VALUES (#{joName}, #{joID}, #{joPassword}, #{joEmail}, #{joYear}, #{joMonth}, #{joDate})
 </insert>
 
-
-<!-- 가입한 회원 정보 -->
-<select id="joinList" resultMap="JoinResult">
-SELECT * FROM joinMember
-</select>
-
 <!--id중복 체크-->
 <select id="idCheck" resultMap="JoinResult" parameterType="String">
 SELECT joID FROM joinMember WHERE joID=#{joID}
 </select>
 
-<!-- 로그인 확인 -->
+<!-- 로그인:아이디,비밀번호 -->
 <select id="loginCheck" resultMap="JoinResult" parameterType="hashmap">
 <![CDATA[
 SELECT * FROM joinMember WHERE joID=#{joID} AND joPassword=#{joPassword}
 ]]> <!-- 오류방지하기 위해 CDATA사용 -->
 </select>
+
+<!-- 마이페이지 -->
+<select id="readMyID" resultMap="JoinResult" parameterType="String">
+SELECT * FROM joinMember WHERE joID=#{joID}
+</select>
+
+<!-- 마이페이지:수정 -->
+<update id="myUpdate" parameterType="com.multi.member.JoinVO">
+UPDATE joinMember 
+SET joName=#{joName}, joID=#{joID}, joPassword=#{joPassword}, joEmail=#{joEmail}, 
+joYear=#{joYear}, joMonth=#{joMonth}, joDate=#{joDate}
+WHERE joID=#{joID}
+</update>
+
+<!-- 관리자:회원정보 조회 -->
+<select id="memberList" resultMap="JoinResult">
+SELECT * FROM joinMember
+</select>
+
+<!-- 관리자:회원 삭제 -->
+<delete id="deleteMember" parameterType="String">
+DELETE FROM joinMember WHERE joID=#{joID}
+</delete>
+
+<!-- 관리자:회원정보 수정 뷰 -->
+<select id="UpdateMember" parameterType="String" resultType="com.multi.member.JoinVO">
+SELECT * FROM joinMember WHERE joID=#{joID}
+</select>
+
+
+
 </mapper>

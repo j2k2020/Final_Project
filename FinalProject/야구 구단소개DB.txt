@@ -1,0 +1,73 @@
+drop table Baseball_teams;
+create table Baseball_teams(
+    btName varchar(30) primary key not null,
+    btOffice varchar(80),
+    btContact varchar(20),
+    btEstablishday varchar(15),
+    btHometown varchar(30),
+    btOwner varchar(30),
+    btCEO varchar(30),
+    btLeader varchar(30),
+    btDirector varchar(30)
+    );
+select*from Baseball_teams;    
+
+insert into Baseball_teams values ('LG','서울특별시 송파구 올림픽로 25 잠실야구장 내(우05500)','02)2005-5801','1990년','서울특별시','구광모','이규홍','차명석','류지현');
+insert into Baseball_teams values ('KT','경기도 수원시 장안구 경수대로 893 수원 케이티 위즈 파크 내(우16308)','031) 274-5945','2013년','수원시','구현모','남상봉','이숭용','이강철');
+insert into Baseball_teams values ('SSG','서울특별시 강남구 테헤란로 114 삼성화재 역삼빌딩 20층(우06233)','02)3454-0772','1982년','대구광역시','n/a','정홍구','홍준학','허삼영');
+insert into Baseball_teams values ('SamSung','서울특별시 송파구 올림픽로 25 잠실야구장 내(우05500)','02)2005-5801','1990년','서울특별시','구광모','이규홍','차명석','류지현');
+insert into Baseball_teams values ('DooSan','서울특별시 송파구 올림픽로 25 잠실야구장 내(우05500)','02)2240-1777','1982년','서울특별시','박정원','전풍(구단주대행)','김태룡','김태형');
+
+
+[2차]
+drop table Baseball_teams;
+create table Baseball_teams(
+    sName varchar(10) primary key not null,
+    btName varchar(30),
+    btOffice varchar(100),
+    btContact varchar(20),
+    btEmail01 varchar(100),
+    btEnail02 varchar(100),
+    btEstablishday varchar(15),
+    btHometown varchar(30),
+    btOwner varchar(30),
+    btCEO varchar(30),
+    btLeader varchar(30),
+    btDirector varchar(30)
+    );
+select*from Baseball_teams;    
+
+insert into Baseball_teams values ('LG','LG 트윈스','서울특별시 송파구 올림픽로 25 잠실야구장 내(우05500)',
+'02)2005-5801','https://www.lgtwins.com/service/html.ncd?view=/pc_twins/twins_main/twins_main','www.lgtwins.com','1990년','서울특별시','구광모','이규홍','차명석','류지현');
+
+insert into Baseball_teams values ('KT','KT 위즈','경기도 수원시 장안구 경수대로 893 수원 케이티 위즈 파크 내(우16308)',
+'031) 274-5945','https://www.ktwiz.co.kr/','www.ktwiz.co.kr','2013년','수원시','구현모','남상봉','이숭용','이강철');
+
+insert into Baseball_teams values ('SSG','SSG 랜더스','서울특별시 강남구 테헤란로 114 삼성화재 역삼빌딩 20층(우06233)',
+'02)3454-0772','http://www.ssglanders.com/main','www.ssglanders.com','1982년','대구광역시','n/a','정홍구','홍준학','허삼영');
+
+insert into Baseball_teams values ('SamSung','삼성 라이온즈','서울특별시 송파구 올림픽로 25 잠실야구장 내(우05500)',
+'02)2005-5801','http://www.samsunglions.com/','www.samsunglions.com','1990년','서울특별시','구광모','이규홍','차명석','류지현');
+
+insert into Baseball_teams values ('DooSan','두산 베어스','서울특별시 송파구 올림픽로 25 잠실야구장 내(우05500)',
+'02)2240-1777','https://www.doosanbears.com/','www.doosanbears.com','1982년','서울특별시','박정원','전풍(구단주대행)','김태룡','김태형');
+
+insert into Baseball_teams values ('NC','NC 다이노스','경기도 성남시 분당구 대왕판교로 644번길 12 엔씨소프트 판교 R&D센터 C동 12층(우13494)',
+' 02)6201-8962','https://www.ncdinos.com/homepage.do','www.ncdinos.com','2011년','창원시','김택진','황순현','김종문','이동욱');
+
+insert into Baseball_teams values ('Kiwoom','키움 히어로즈','서울특별시 구로구 경인로 430 고척스카이돔 내(우08223)',
+'02)3660-1000','https://www.heroesbaseball.co.kr/index.do','www.heroesbaseball.co.kr','2008년','서울특별시','박세영','허홍','고형욱','홍원기');
+
+insert into Baseball_teams values ('KIA','KIA 타이거즈','광주광역시 북구 서림로 10 광주-기아 챔피언스필드 내 2층 (우61255)',
+'070)7686-8000','https://tigers.co.kr/','www.tigers.co.kr','2001년','광주광역시','정몽구/(대행)송호성','이화원','조계현','맷 윌리엄스');
+
+insert into Baseball_teams values ('Hanwha','한화 이글스','대전광역시 중구 대종로 373 한화생명 이글스 파크 내(우35021)',
+'042)630-8200','https://www.hanwhaeagles.co.kr/index.do','hwww.hanwhaeagles.co.kr','1986년','대전광역시','김승연','박찬혁','정민철','카를로스 수베로');
+
+insert into Baseball_teams values ('Lotte','롯데 자이언츠','부산광역시 동래구 사직로 45 사직야구장 내(우47874)',
+'051)590-9000','http://www.giantsclub.com/html/','www.giantsclub.com','1982년','부산광역시','신동빈','이석환','성민규','래리 서튼');
+
+
+select btOffice,btContact from Baseball_teams where btName='LG';    
+
+

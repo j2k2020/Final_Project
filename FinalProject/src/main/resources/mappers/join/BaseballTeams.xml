@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.multi.member.teams.IBaseballTeamsDAO">
+<resultMap type="com.multi.member.teams.BaseballTeamsVO" id="teamsResult">
+<result property="sName"   column="sName" />
+<result property="btName"   column="btName" />
+<result property="btOffice"   column="btOffice" />
+<result property="btContact"   column="btContact" />
+<result property="btEmail01"   column="btEmail01" />
+<result property="btEnail02"   column="btEnail02" />
+<result property="btEstablishday"   column="btEstablishday" />
+<result property="btHometown"   column="btHometown" />
+<result property="btOwner"   column="btOwner" />
+<result property="btCEO"   column="btCEO" />
+<result property="btLeader"   column="btLeader" />
+<result property="btDirector"   column="btDirector" />
+<result property="btmascot"   column="btmascot" />
+</resultMap>
+
+
+<!-- 구단소개 -->
+<select id="teamsInfo" parameterType="String" resultType="com.multi.member.teams.BaseballTeamsVO">
+SELECT 
+btName,btOffice,btContact,btEmail01,btEnail02,btEstablishday,btHometown,btOwner,btCEO,btLeader,btDirector,btmascot
+FROM Baseball_teams WHERE sName=#{sName}
+</select>
+
+
+</mapper>
