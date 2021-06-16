@@ -1,12 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>        
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Chatbot</title>
+<title>회원상세정보</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/admin2.css'/>"> 	
 <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <body>
@@ -22,14 +23,22 @@
 </div>
 </div>
 </div><!-- end header -->
-
-
-
-<!-- 챗봇창 시작-->
-<form action="/Chatbot" class="Chatbot">
-<h1>챗봇</h1>
+<div class="table">
+<form>
+<table>
+<tr><th>이름</th><td>${join.joName }</td></tr>
+<tr><th>아이디</th><td>${join.joID }</td></tr>
+<tr><th>비밀번호</th><td>${join.joPassword }</td></tr>
+<tr><th>이메일</th><td>${join.joEmail }</td></tr>
+<tr><th>출생년도</th><td>${join.joYear }</td></tr>
+<tr><th>월</th><td>${join.joMonth }</td></tr>
+<tr><th>일</th><td>${join.joDate }</td></tr>
+</table>
 </form>
-	
-</div>				
+<br><br> 
+<a id="button" href="/admin/memberUpdatForm/${join.joID }">정보 수정</a>
+</div>
+</body>
+</html>
 </body>
 </html>

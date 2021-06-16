@@ -42,7 +42,64 @@
 			</div>
 			<!-- end event -->
 			
-			
-		<h1>주루기록 페이지</h1>
-	</body>
+	<!-- 선수 검색 창 -->
+		<div class="select_area">
+			<div class="select">
+				<div class="select1">
+					<h3 id="select_title">선수검색</h3>
+				</div>
+				<!--end select_title -->
+
+				<div class="select2">
+					<form action="#" id="select_form">
+						<input type="text" id="sel_player" placeholder="  ex) 선수이름">
+					</form>
+				</div>
+				<!--end select_form -->
+			</div>
+			<!-- end select -->
+		</div>
+
+		<!-- 리스트:기록 테이블 -->
+		<div class="list_body">
+			<form action="#">
+				<table class="baseball_list">
+					<tr>
+						<th>순위</th>
+						<th>선수명</th>
+						<th>팀명</th>
+						<th>G</th>
+						<th>SBA</th>
+						<th>SB</th>
+						<th>CS</th>
+						<th>SB%</th>
+						<th>OOB</th>
+						<th>POK</th>
+					</tr>
+					<c:forEach items="${runner01List }" var="runner">
+						<tr align="center">
+							<td>${runner.rNum }</td>
+							<td>${runner.rName }</td>
+							<td>${runner.rTeam }</td>
+							<td>${runner.rG }</td>
+							<td>${runner.rSBA }</td>
+							<td>${runner.rSB }</td>
+							<td>${runner.rCS }</td>
+							<td>${runner.rSBp }</td>
+							<td>${runner.rOOB }</td>
+							<td>${runner.rPOK }</td>
+						</tr>
+					</c:forEach>
+				</table>
+			</form>
+		</div>
+		<!-- end list_body -->
+	</div>
+	<!-- end wrap -->
+	<div id="footer">
+		<br> <br> <a
+			href="https://drive.google.com/drive/folders/1EPHrF_y4CtRxgS1JM9hk4yCVCFsROWyM">
+			4조[AI 유나이티드 스포츠 클럽-드라이브] </a>
+	</div>
+</body>
 </html>

@@ -12,27 +12,20 @@ import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
 
 /*
- * Defense
- * 
- * A : ����
-CS : ��������
-CS% : ����������
-DP : ����
-E : ��å
-FPCT : ������
-G : ���
-GS : ���߰��
-PB : ����
-PKO : ������
-PO : �ڻ�
-POS : ������
-SB : �������
+  Runner
+G : 경기
+SBA : 도루시도
+SB : 도루허용
+CS : 도루실패
+SB% : 도루성공률
+OOB : 주루사
+POK : 견제사
  */
 public class Runner01 {
 	public static Connection getConnection() {
 		String user = "springuser";
 		String pw = "1234";
-		String url = "jdbc:mysql://localhost:3306/springdb";
+		String url = "jdbc:mysql://localhost:3306/springdb?serverTimezone=UTC";
 		Connection conn = null;
 
 		try {
@@ -53,34 +46,25 @@ public class Runner01 {
 	}
 
 	static public void selectList(Connection conn, PreparedStatement pstmt, ResultSet res) throws SQLException {
-		String sql = "SELECT * FROM DEFENSE ORDER BY dNum";
+		String sql = "SELECT * FROM Runner ORDER BY rNum";
 		pstmt = conn.prepareStatement(sql);
 		res = pstmt.executeQuery();
 		while (res.next()) {
 
-//			dNUM, dNAME, dTEAM, dPOS, dG, dGS, dIP, dE, dPKO, dPO, dA, dDP, dFPCT, dPB, dSB, dCS, dCSPercent
+//			rNum,rName,rTeam,rG,rSBA,rSB,rCS,rSBp,rOOB,rPOK
 
-			Integer dNUM = Integer.parseInt(res.getString("dNUM"));
-			String dNAME = res.getString("dNAME");
-			String dTEAM = res.getString("dTEAM");
-			String dPOS = res.getString("dPOS");
-			String dG = res.getString("dG");
-			String dGS = res.getString("dGS");
-			String dIP = res.getString("dIP");
-			String dE = res.getString("dE");
-			String dPKO = res.getString("dPKO");
-			String dPO = res.getString("dPO");
-			String dA = res.getString("dA");
-			String dDP = res.getString("dDP");
-			String dFPCT = res.getString("dFPCT");
-			String dPB = res.getString("dPB");
-			String dSB = res.getString("dSB");
-			String dCS = res.getString("dCS");
-			// CS&==CSPercent
-			String dCSPercent = res.getString("dCSPercent");
+			Integer rNum = Integer.parseInt(res.getString("rNum"));
+			String rName = res.getString("rName");
+			String rTeam = res.getString("rTeam");
+			String rG = res.getString("rG");
+			String rSBA = res.getString("rSBA");
+			String rSB = res.getString("rSB");
+			String rCS = res.getString("rCS");
+			String rSBp = res.getString("rSBp");
+			String rOOB = res.getString("rOOB");
+			String rPOK = res.getString("rPOK");
 
-			System.out.println(String.format("%d %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s %s", dNUM, dNAME, dTEAM,
-					dPOS, dG, dGS, dIP, dE, dPKO, dPO, dA, dDP, dFPCT, dPB, dSB, dCS, dCSPercent));
+			System.out.println(String.format("%d %s %s %s %s %s %s %s %s %s", rNum,rName,rTeam,rG,rSBA,rSB,rCS,rSBp,rOOB,rPOK));
 		}
 
 	}
@@ -88,7 +72,7 @@ public class Runner01 {
 	static public void insertList(Connection conn, PreparedStatement pstmt, ResultSet res, Elements tables1)
 			throws SQLException {
 
-		String sql = "INSERT INTO DEFENSE VALUES(?, ?, ?, ?,?, ?, ?, ?,?, ?, ?, ?,?, ?, ?, ?,?)";
+		String sql = "INSERT INTO Runner VALUES(?, ?, ?, ?,?, ?, ?, ?,?, ?)";
 		pstmt = conn.prepareStatement(sql);
 
 		int row1 = tables1.select("tr").size() - 1; // ��
@@ -118,7 +102,7 @@ public class Runner01 {
 		ResultSet res = null;
 		String sql;
 
-		Document doc = Jsoup.connect("https://www.koreabaseball.com/Record/Player/Defense/Basic.aspx").get();
+		Document doc = Jsoup.connect("https://www.koreabaseball.com/Record/Player/Runner/Basic.aspx").get();
 
 		Elements tables1 = doc.select("tr");
 

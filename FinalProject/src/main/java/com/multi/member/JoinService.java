@@ -66,6 +66,11 @@ IJoinDAO dao;
 		
 	}
 
+	@Override
+	public JoinVO myUpdateForm(String joID) {
+		return dao.myUpdateForm(joID);
+	}
+
 
 	
 	

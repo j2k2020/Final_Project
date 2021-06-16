@@ -15,6 +15,7 @@ public interface IJoinDAO {
 	JoinVO UpdateMember(String joID);  //관리자:회원정보수정	
 	void myUpdate(JoinVO join); //마이페이지:수정
 	void memberOut(JoinVO vo, HttpSession session);
+	JoinVO myUpdateForm(String joID);//마이페이지:수정페이지
 
 
 }

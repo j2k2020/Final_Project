@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.multi.member.Runner01.IRunner01DAO">
+<resultMap type="com.multi.member.Runner01.Runner01VO" id="runner01Result">
+<result property="rNum" column="rNum" />
+<result property="rName" column="rName" />
+<result property="rTeam" column="rTeam" />
+<result property="rG" column="rG" />
+<result property="rSBA" column="rSBA" />
+<result property="rSB" column="rSB" />
+<result property="rCS" column="rCS" />
+<result property="rSBp" column="rSBp" />
+<result property="rOOB" column="rOOB" />
+<result property="rPOK" column="rPOK" />
+</resultMap>
+
+<select id="runner01List" resultMap="runner01Result">
+SELECT * FROM Runner
+</select>
+
+
+</mapper>  

@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>MyPage</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/mydetailpage.css'/>"> 	
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/admin.css'/>"> 	
 <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <body>
@@ -23,25 +23,26 @@
 </div>
 </div>
 </div><!-- end header -->
-
-<div class="join_body">
-<h1>My Profile</h1>
-<form class="form" action="myUpdate">
+관리자 리스트입니다.
+<div class="table">
+<form>
 <table>
-<tr id="tr_b"><th>이름</th><td>${join.joName }</td></tr>
-<tr id="tr_b"><th>아이디</th><td><a id="button" href="/myUpdate/updateForm/${join.joID}">${join.joID }</a></td></tr>
-<tr id="tr_b"><th>비밀번호</th><td>${join.joPassword }</td></tr>
-<tr id="tr_b"><th>이메일</th><td>${join.joEmail }</td></tr>
-<tr id="tr_b"><th>년</th><td>${join.joYear }</td></tr>
-<tr id="tr_b"><th>월</th><td>${join.joMonth }</td></tr>
-<tr><th>일</th><td>${join.joDate }</td></tr>
+<tr><th>이름</th><th>아이디</th><th>비밀번호</th><th>이메일</th><th>출생년도</th><th>월</th><th>일</th><th>DELETE</th></tr>
+<c:forEach items="${memlist }" var="mem">
+<tr>
+<td>${mem.joName }</td>
+<td><a id="button" href="<c:url value='/admin/memberDetailView/${mem.joID}'/>">${mem.joID }</a></td>
+<td>${mem.joPassword }</td>
+<td>${mem.joEmail }</td>
+<td>${mem.joYear }</td>
+<td>${mem.joMonth }</td>
+<td>${mem.joDate }</td>
+<td><a id="button" href="<c:url value='/deleteMember/${mem.joID}'/>">삭제하기</a></td>
+</tr>
+</c:forEach>
 </table>
-<div class="btn">
-<a id="button2" href="<c:url value='mypage/deleteMember/${join.joID}'/>" >탈퇴하기</a>
+</form>
 </div>
-</form><!-- 로그인창 끝 -->
-</div><!-- 아이디,비밀번호 끝-->	
 
-</div>
 </body>
 </html>

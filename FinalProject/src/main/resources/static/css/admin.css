@@ -1,0 +1,53 @@
+@charset "UTF-8";
+/* admin.css */
+
+.table{
+	position: relative;
+	margin: 2% 30% 5% 30%;
+	width: 900px;
+}
+
+form > div{
+	display: flex;
+	justify-content: center;
+	padding-bottom: 7px;
+	align-items: center;
+}
+
+table{
+	border-collapse: collapse;
+}
+tr{
+	border-bottom: 2px solid #ff80c0;
+}
+th{
+	width: 100px;
+	text-align: center;
+	font-size: 18px;
+	padding: 15px 5px 10px 5px;
+	background-color: #ffacd6;
+}
+td{
+	font-family: monospace;
+	text-align: center;
+	font-size: 18px;
+	padding: 15px 5px 10px 5px;
+}
+a{
+	text-decoration: none;
+}
+
+#button{
+	width: 85px;
+	float: right;
+	padding: 3px;
+	border-radius: 20% / 50%;
+	background-color: #ffacd6;
+}
+
+#button:hover{
+	border-color: #80ffff;
+	background-color: #80ffff;
+	font-weight: bold;
+}
+

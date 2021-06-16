@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>MyPage</title>
 <link rel="stylesheet" type="text/css" href="<c:url value='/css/header.css'/>">
-<link rel="stylesheet" type="text/css" href="<c:url value='/css/mydetailpage.css'/>"> 	
+<link rel="stylesheet" type="text/css" href="<c:url value='/css/join.css'/>"> 	
 <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
 </head>
 <body>
@@ -26,19 +26,30 @@
 
 <div class="join_body">
 <h1>My Profile</h1>
-<form class="form" action="myUpdate">
-<table>
-<tr id="tr_b"><th>이름</th><td>${join.joName }</td></tr>
-<tr id="tr_b"><th>아이디</th><td><a id="button" href="/myUpdate/updateForm/${join.joID}">${join.joID }</a></td></tr>
-<tr id="tr_b"><th>비밀번호</th><td>${join.joPassword }</td></tr>
-<tr id="tr_b"><th>이메일</th><td>${join.joEmail }</td></tr>
-<tr id="tr_b"><th>년</th><td>${join.joYear }</td></tr>
-<tr id="tr_b"><th>월</th><td>${join.joMonth }</td></tr>
-<tr><th>일</th><td>${join.joDate }</td></tr>
-</table>
-<div class="btn">
-<a id="button2" href="<c:url value='mypage/deleteMember/${join.joID}'/>" >탈퇴하기</a>
+<form class="form" action="/myUpdate/myUpdateForm">
+<div>
+<label>이름</label>
+<input type="text" id="joName" value="${up.joName }" readonly>
 </div>
+<div>
+<label>아이디</label>
+<input type="text" id="joID" value="${up.joID }" readonly>
+</div>
+<div>
+<label>비밀번호</label>
+<input type="password" id="joPassword" value="${up.joPassword }" >
+</div>
+<div>
+<label>이메일 주소</label>
+<input type="text" id="joEmail" value="${up.joEmail }" >
+</div>
+<div class="birth">
+<label>생년월일</label>
+<input type="text"  id="yy"  maxlength="4" size="4" value="${up.joYear }" >
+<input type="text"  id="mm"  maxlength="2" size="2" value="${up.joMonth }" >
+<input type="text"  id="dd"  maxlength="2" size="2" value="${up.joDate }" >
+</div>
+<input type="submit" value="수정완료"> 
 </form><!-- 로그인창 끝 -->
 </div><!-- 아이디,비밀번호 끝-->	
 

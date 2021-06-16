@@ -16,7 +16,8 @@
 <div class="header_bg">
 <div class="logo_area">
 	<div class="logo_img"><a id="logo">United Baseball Club</a></div>
-	 <div class="btn2"><a href="javascript:history.go(-3);" id="btn_loginOut">로그아웃</a></div>
+	<div class="btn2"><a href="<c:url value='loginOut' />" id="btn_loginOut">로그아웃</a></div>
+	<!-- <div class="btn2"><a href="javascript:history.go(-3);" id="btn_loginOut">로그아웃</a></div> -->
 	 <div class="btn2"><a id="a1">Signed in as &nbsp</a><a id="a2"> ${sessionScope.sid}</a></div> 
 	 <div><a href="javascript:history.back();"><i class="fas fa-home"></i>메인으로</a></div>
 </div>

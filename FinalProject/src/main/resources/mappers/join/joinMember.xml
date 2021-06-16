@@ -38,19 +38,26 @@ SELECT * FROM joinMember WHERE joID=#{joID} AND joPassword=#{joPassword}
 SELECT * FROM joinMember WHERE joID=#{joID}
 </select>
 
+
+<!-- 마이페이지:수정페이지 -->
+<select id="myUpdateForm" parameterType="String" resultType="com.multi.member.JoinVO">
+SELECT * FROM joinMember WHERE joID=#{joID}
+</select>
 <!-- 마이페이지:수정 -->
 <update id="myUpdate" parameterType="com.multi.member.JoinVO">
-UPDATE joinMember 
-SET joName=#{joName}, joID=#{joID}, joPassword=#{joPassword}, joEmail=#{joEmail}, 
-joYear=#{joYear}, joMonth=#{joMonth}, joDate=#{joDate}
-WHERE joID=#{joID}
+UPDATE joinMember SET joPassword=#{joPassword}, joEmail=#{joEmail}, 
+joYear=#{joYear}, joMonth=#{joMonth}, joDate=#{joDate} WHERE joID=#{joID}
 </update>
 
 <!-- 관리자:회원정보 조회 -->
 <select id="memberList" resultMap="JoinResult">
 SELECT * FROM joinMember
 </select>
-
+<!--관리자:수정
+<update id="myUpdate" parameterType="com.multi.member.JoinVO">
+UPDATE joinMember SET joName=#{joName}, joID=#{joID}, joPassword=#{joPassword}, joEmail=#{joEmail}, 
+joYear=#{joYear}, joMonth=#{joMonth}, joDate=#{joDate} WHERE joID=#{joID}
+</update> -->
 <!-- 관리자:회원 삭제 -->
 <delete id="deleteMember" parameterType="String">
 DELETE FROM joinMember WHERE joID=#{joID}

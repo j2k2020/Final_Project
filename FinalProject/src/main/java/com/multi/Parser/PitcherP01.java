@@ -68,7 +68,7 @@ public class PitcherP01 {
 	public static Connection getConnection() {
 		String user = "springuser";
 		String pw = "1234";
-		String url = "jdbc:mysql://localhost:3306/springdb";
+		String url = "jdbc:mysql://localhost:3306/springdb?serverTimezone=UTC";
 		Connection conn = null;
 
 		try {
